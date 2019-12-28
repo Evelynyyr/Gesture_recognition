@@ -1,0 +1,6 @@
+image Image skin_recognition
+image Template cr_otsu/image Target skin_recognition
+image Target descriptor/image Template descriptor
+
+process match(template_path,target_path,
+process run(target_path,result)
