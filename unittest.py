@@ -18,7 +18,7 @@ class TestCase(unittest.TestCase):
         Input_path = Image(Input)
         expect = Template(r'templates\f_template.jpg').image_path
         output = template_select(Input_path).image_path
-        self.assertEqual(1,1)
+        self.assertEqual(expect,output)
 
 
 if __name__ == '__main__':
