@@ -38,6 +38,7 @@ def template_select(target):
         if a == match:
             best_match = templates[n1]
         n1 = n1 + 1
+    print(type(best_match),best_match)
     return best_match  # Path to the best matching template
 
 

@@ -29,7 +29,6 @@ class Image(object):
 
     def skin_recognition(self, image_name):
         """YCr component and Otsu threshold segmentation of CrCb color space, using cr_otsu method"""
-        print(image_name)
         img = self.color_read
         ycrcb = cv2.cvtColor(img, cv2.COLOR_BGR2YCR_CB)
         (y, cr, cb) = cv2.split(ycrcb)
@@ -106,8 +105,8 @@ class Target(Image):
         return Target(image_skin_path)
 
 if __name__ == "__main__":
-    image = Image(r'gestures\f_target.jpg')
-    image.skin_recognition('f_skin')
+    image = Template('templates/f_template.jpg')
+    image.cr_otsu("f_template")
 
 
 
